@@ -1,12 +1,16 @@
+import model.Motorbike;
+import model.MotorbikeList;
+import model.MotorbikeListInterface;
+
 import java.io.*;
 import java.rmi.Naming;
-import java.util.ArrayList;
 
 public class MotorbikeServer {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         // TODO Auto-generated method stub
 
+        //initialize list
         MotorbikeList ml = new MotorbikeList();
         System.out.println("Server has started.....");
 
@@ -15,7 +19,7 @@ public class MotorbikeServer {
             FileInputStream fileIn = new FileInputStream("allMotorbike.ser");
             ObjectInputStream objectIn = new ObjectInputStream(fileIn);
             MotorbikeListInterface newMotorbike = (MotorbikeListInterface) objectIn.readObject();
-         //   ArrayList<Motorbike> ml2 = newMotorbike.getList();
+            //ArrayList<model.Motorbike> ml2 = newMotorbike.getList();
             //send newMotorbike.getList() over rmi
 
             objectIn.close();

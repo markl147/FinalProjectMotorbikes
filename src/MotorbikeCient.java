@@ -1,3 +1,7 @@
+import model.Motorbike;
+import model.MotorbikeInterface;
+import model.MotorbikeListInterface;
+
 import java.rmi.Naming;
 import java.util.ArrayList;
 
